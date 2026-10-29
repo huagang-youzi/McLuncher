@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-theme-mode="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>常见问题 · McLuncher</title>
+<meta name="description" content="McLuncher 常见问题：是否收费、是否正式版、安全软件拦截、包体积、系统支持、多实例与断点续传等。">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#080a0e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f6f8" media="(prefers-color-scheme: light)">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+  (function () {
+    try {
+      var m = localStorage.getItem("mc.theme") || "auto";
+      var dark = m === "auto"
+        ? (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches)
+        : m === "dark";
+      var r = document.documentElement;
+      r.setAttribute("data-theme-mode", m);
+      r.setAttribute("data-theme", dark ? "dark" : "light");
+      r.classList.add("has-js");
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body data-page="faq">
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="hdr" data-header data-scrolled="false" data-open="false">
+  <div class="hdr__inner">
+    <a class="brand" href="index.html" aria-label="McLuncher 首页">
+      <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="15" fill="#0b0f14"></rect>
+        <path d="M17 46V20l15 16 15-16v26" fill="none" stroke="#3fb27f" stroke-width="6"
+              stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <span class="brand__text">McLuncher</span>
+      <span class="brand__ver">v1.12.0</span>
+    </a>
+
+    <nav class="nav" aria-label="主导航">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html">首页</a></li>
+        <li><a class="nav__link" href="download.html">下载</a></li>
+        <li><a class="nav__link" href="guide.html">指南</a></li>
+        <li><a class="nav__link" href="faq.html" aria-current="page">问答</a></li>
+        <li><a class="nav__link" href="status.html">状态</a></li>
+      </ul>
+    </nav>
+
+    <div class="hdr__tools">
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换配色">
+        <svg class="icon-auto" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <circle cx="9" cy="9" r="6.6" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+          <path d="M9 2.4a6.6 6.6 0 0 1 0 13.2z" fill="currentColor"></path>
+        </svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <circle cx="9" cy="9" r="3.6" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+          <path d="M9 1v2M9 15v2M1 9h2M15 9h2M3.6 3.6l1.4 1.4M13 13l1.4 1.4M14.4 3.6L13 5M5 13l-1.4 1.4"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M14.8 11.4A6.2 6.2 0 0 1 6.6 3.2a6.6 6.6 0 1 0 8.2 8.2z" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+        </svg>
+        <span class="theme-label" data-theme-label>跟随系统</span>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="打开导航菜单">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap wrap--text">
+
+    <div class="page-head">
+      <p class="eyebrow">常见问题</p>
+      <h1>先把疑问一次说清</h1>
+      <p class="lead">
+        下面这些是被问得最多的。输入关键词可以过滤，比如“收费”“拦截”“模组”。
+        找不到答案的话，<a href="guide.html">使用指南</a>里通常有更细的步骤。
+      </p>
+    </div>
+
+    <div class="faq-tools">
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true">
+          <circle cx="8" cy="8" r="5.2" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+          <path d="M11.8 11.8 15.6 15.6" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round"></path>
+        </svg>
+        <input type="search" data-faq-filter placeholder="输入关键词过滤问题…" aria-label="过滤问题">
+      </label>
+      <span class="faq-count" data-faq-count>共 11 条</span>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" data-faq-item open>
+        <summary>下载要钱吗？需要注册账号吗？</summary>
+        <div class="faq-item__body">
+          <p>完全免费，也不需要注册或登录任何账号就能下载。站点不收集邮箱、手机号之类的信息。</p>
+          <p>如果你用正版账号登录客户端，那是为了进正版服务器，和下载本身无关。</p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-faq-item>
+        <summary>Windows 提示“未知发布者”，或被安全软件拦下怎么办？</summary>
+        <div class="faq-item__body">
+          <p>
+            程序没有购买代码签名证书，所以 Windows SmartScreen 会提示“未知发布者”，部分杀毒软件也可能直接拦截。
+            这属于未签名程序的通用现象，不代表文件被篡改。
+          </p>
+          <p>
+            处理办法：点「更多信息 → 仍要运行」；或者把文件加入杀毒软件白名单。
+            想彻底确认文件没被动过，用下载页的 SHA-256 校验值核对一遍即可。
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-faq-item>
+        <summary>现在是正式版吗？</summary>
+        <div class="faq-item__body">
+          <p>
+            目前是<strong>测试版</strong>：功能仍在持续调整，界面细节随时可能变化，正式版还在开发中。
+            遇到问题或有建议，欢迎反馈，我们会尽快跟进。
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-faq-item>
+        <summary>一个启动器为什么有 69 MB？</summary>
+        <div class="faq-item__body">
+          <p>
+            因为它是<strong>自包含单文件</strong>：.NET 运行环境连同启动器本体一起打包在 exe 里，
+            所以你在任何一台 Windows 上都不用先装运行时，双击就跑。
+          </p>
+          <p class="muted">代价是体积大一点，换来的是“拿到就能用”。</p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-faq-item>
+        <summary>会写注册表、改系统设置吗？怎么卸载？</summary>
+        <div class="faq-item__body">
+          <p>
+            不会写注册表，也不会往系统目录塞文件、注册开机启动项。运行数据只放在用户自己的应用数据目录里。
+          </p>
+          <p>卸载方式很直接：删掉 exe 文件即可；想更彻底，再把对应的缓存目录一起删掉。</p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-faq-item>
+        <summary>同一个版本能建多个游戏吗？</summary>
+        <div class="faq-item__body">
+          <p>
+            能，而且这是它的主要用法之一。比如 1.20.1 建一份“生存”玩原版，再建一份“生电”装满模组，
+            两份的存档、设置、模组目录完全独立，互不影响。
+          </p>
+          <p>名字在同一台机器上唯一，重名会自动加「（1）」后缀。</p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-faq-item>
+        <summary>支持 macOS、Linux 或手机吗？</summary>
+        <div class="faq-item__body">
+          <p>目前只提供 Windows 10 / 11 的 64 位版本，其他平台还没有计划中的构建。</p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-faq-item>
+        <summary>下载中断了怎么办？</summary>
+        <div class="faq-item__body">
+          <p>重新点一次下载就好，支持断点续传，会接着上次的进度继续，不用从头再来。</p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-faq-item>
+        <summary>这个站点需要服务器或数据库吗？</summary>
+        <div class="faq-item__body">
+          <p>
+            不需要。整站是纯静态文件，放在任意静态托管上就能跑，没有后端程序、没有数据库、没有接口限流，
+            因此也不会出现“服务器崩了”这类问题。
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-faq-item>
+        <summary>页面支持深色模式吗？</summary>
+        <div class="faq-item__body">
+          <p>
+            支持，而且默认跟随系统。点页头右上角的按钮可以在「跟随系统 → 浅色 → 深色」之间循环，
+            选择会记在本地浏览器里，下次打开还是上次的样子。
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-faq-item>
+        <summary>想改站点的文字或下载链接，怎么弄？</summary>
+        <div class="faq-item__body">
+          <p>
+            整站是手写的静态 HTML，没有构建步骤：直接改对应的 <code>.html</code> 文件，刷新即可生效。
+            样式集中在 <code>assets/css/main.css</code>，交互集中在 <code>assets/js/site.js</code>。
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <p class="faq-empty" data-faq-empty>没有匹配的问题，换个关键词试试？</p>
+
+  </div>
+</main>
+
+<footer class="ftr">
+  <div class="ftr__inner">
+    <div class="ftr__brand">
+      <a class="brand" href="index.html">
+        <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="15" fill="#0b0f14"></rect>
+          <path d="M17 46V20l15 16 15-16v26" fill="none" stroke="#3fb27f" stroke-width="6"
+                stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span class="brand__text">McLuncher</span>
+      </a>
+      <p>纯静态站点：没有后端、没有数据库、没有追踪脚本，页面里不加载任何第三方资源。</p>
+    </div>
+
+    <div>
+      <h4>站点</h4>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="download.html">下载</a></li>
+        <li><a href="guide.html">使用指南</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>支持</h4>
+      <ul>
+        <li><a href="faq.html">常见问题</a></li>
+        <li><a href="status.html">运行状态</a></li>
+        <li><a href="guide.html#verify">校验文件</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ftr__bottom">
+    <span>© <span data-year>2026</span> McLuncher · 作者 &amp; 开发者：花冈柚子</span>
+    <span>版本 v1.12.0 · <a href="#main">回到顶部</a></span>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# 404 页面不参与索引
+Disallow: /404.html

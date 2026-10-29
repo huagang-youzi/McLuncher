@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-theme-mode="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使用指南 · McLuncher</title>
+<meta name="description" content="McLuncher 使用指南：下载与首次启动、创建与管理游戏实例、资源库与整合包、键盘快捷键、文件校验。">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#080a0e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f6f8" media="(prefers-color-scheme: light)">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>
+  (function () {
+    try {
+      var m = localStorage.getItem("mc.theme") || "auto";
+      var dark = m === "auto"
+        ? (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches)
+        : m === "dark";
+      var r = document.documentElement;
+      r.setAttribute("data-theme-mode", m);
+      r.setAttribute("data-theme", dark ? "dark" : "light");
+      r.classList.add("has-js");
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body data-page="guide">
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="hdr" data-header data-scrolled="false" data-open="false">
+  <div class="hdr__inner">
+    <a class="brand" href="index.html" aria-label="McLuncher 首页">
+      <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="15" fill="#0b0f14"></rect>
+        <path d="M17 46V20l15 16 15-16v26" fill="none" stroke="#3fb27f" stroke-width="6"
+              stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <span class="brand__text">McLuncher</span>
+      <span class="brand__ver">v1.12.0</span>
+    </a>
+
+    <nav class="nav" aria-label="主导航">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html">首页</a></li>
+        <li><a class="nav__link" href="download.html">下载</a></li>
+        <li><a class="nav__link" href="guide.html" aria-current="page">指南</a></li>
+        <li><a class="nav__link" href="faq.html">问答</a></li>
+        <li><a class="nav__link" href="status.html">状态</a></li>
+      </ul>
+    </nav>
+
+    <div class="hdr__tools">
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换配色">
+        <svg class="icon-auto" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <circle cx="9" cy="9" r="6.6" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+          <path d="M9 2.4a6.6 6.6 0 0 1 0 13.2z" fill="currentColor"></path>
+        </svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <circle cx="9" cy="9" r="3.6" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+          <path d="M9 1v2M9 15v2M1 9h2M15 9h2M3.6 3.6l1.4 1.4M13 13l1.4 1.4M14.4 3.6L13 5M5 13l-1.4 1.4"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M14.8 11.4A6.2 6.2 0 0 1 6.6 3.2a6.6 6.6 0 1 0 8.2 8.2z" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+        </svg>
+        <span class="theme-label" data-theme-label>跟随系统</span>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="打开导航菜单">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <div class="page-head">
+      <p class="eyebrow">使用指南</p>
+      <h1>从下载到进游戏</h1>
+      <p class="lead">以 Windows 版为例，按顺序做完这几步就能开玩。左侧目录可以直接跳到对应章节。</p>
+    </div>
+
+    <div class="doc section">
+      <aside class="toc" aria-label="本页目录">
+        <p class="toc__title">本页目录</p>
+        <ol>
+          <li><a href="#start">下载与安装</a></li>
+          <li><a href="#first-run">首次启动</a></li>
+          <li><a href="#create">建一个游戏</a></li>
+          <li><a href="#manage">管理游戏</a></li>
+          <li><a href="#library">资源库与整合包</a></li>
+          <li><a href="#keys">键盘快捷键</a></li>
+          <li><a href="#verify">校验文件</a></li>
+          <li><a href="#trouble">遇到问题时</a></li>
+        </ol>
+      </aside>
+
+      <div class="doc__body">
+        <section id="start">
+          <h2>1. 下载与安装</h2>
+          <p>
+            去<a href="download.html">下载页</a>拿那个约 69 MB 的 <code>McLuncher-windows.exe</code>。
+            <strong>不需要安装</strong>：不用解压、不用先装 .NET 或 Java、也不需要管理员权限。
+          </p>
+          <p class="muted small">
+            建议放在一个固定目录（比如 <code>D:\Games\</code>）而不是临时下载文件夹，避免以后被清理掉。
+          </p>
+        </section>
+
+        <section id="first-run">
+          <h2>2. 首次启动</h2>
+          <p>
+            双击 exe。如果 Windows 弹出“未知发布者”提示，点「更多信息 → 仍要运行」——程序没有做代码签名，
+            这个提示属于正常现象。首次启动需要准备运行环境，会多等几秒，之后再次打开就是秒开。
+          </p>
+          <p>
+            进入主界面后，顶部会显示当前 Java 运行时的状态：<strong>正常时是中性色，缺失或版本不对时变成橙色</strong>，
+            直接点它就会跳到工具页，可以一键补齐。
+          </p>
+        </section>
+
+        <section id="create">
+          <h2>3. 建一个游戏</h2>
+          <p>「版本」页分成上下两部分：上半部分是已经建好的游戏，下半部分是可安装的官方版本。</p>
+          <ol>
+            <li>在下面的版本列表里选中一个版本（比如 1.20.1）。</li>
+            <li>点「安装并创建」。</li>
+            <li>给它起个名字——默认就是版本号，你也可以改成“生存”“生电”之类。</li>
+            <li>等文件下载完，回到上面列表，启动这个名字就进游戏。</li>
+          </ol>
+          <p class="muted small">
+            同一个版本可以建多份：模组、存档、设置全部各自独立，互不串档。名字全机唯一，
+            重名会自动加「（1）」后缀；想复用某个名字，先把占用它的游戏删掉。
+          </p>
+        </section>
+
+        <section id="manage">
+          <h2>4. 管理游戏</h2>
+          <p><strong>改名</strong>：选中游戏后点上方「改名」。</p>
+          <p>
+            <strong>删除</strong>：选中后点「删除」。默认<strong>只删记录、保留文件夹</strong>；
+            如果确定连存档和模组一起清掉，在弹窗里勾选“同时删除文件夹”。
+          </p>
+          <p>
+            <strong>打开目录</strong>：想手动塞个存档或者看日志，用「打开目录」直接跳到实例文件夹。
+          </p>
+          <p class="muted small">
+            按钮点不动时把鼠标停上去，会说明原因，比如“还没有游戏”“版本文件还没下载完”。
+          </p>
+        </section>
+
+        <section id="library">
+          <h2>5. 资源库与整合包</h2>
+          <p>
+            「资源库」支持<strong>模组、整合包、光影包、材质包、数据包</strong>五类资源，
+            数据来自公开的资源接口，可以按关键词搜索，也可以按类型筛选。
+          </p>
+          <ul>
+            <li>双击任意条目，或点「查看简介」，进入详情页：左侧看图，右侧看说明与版本。</li>
+            <li>点「下载到当前游戏」，文件会直接落到当前实例对应的目录里。</li>
+            <li>整合包更省事：一键装好依赖，并自动创建一个独立游戏，不和你现有的实例混在一起。</li>
+            <li>按 <kbd>Esc</kbd> 可以从详情页退回列表。</li>
+          </ul>
+        </section>
+
+        <section id="keys">
+          <h2>6. 键盘快捷键</h2>
+          <p>整站（整个客户端）都是键盘可用的，常用组合如下：</p>
+          <div class="panel" style="padding:0.4rem 0.9rem">
+            <table class="shortcuts">
+              <thead>
+                <tr>
+                  <th scope="col">按键</th>
+                  <th scope="col">作用</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><kbd>Ctrl</kbd> + <kbd>1</kbd> ~ <kbd>5</kbd></td>
+                  <td>依次切到 首页 / 资源库 / 版本 / 工具 / 账号</td>
+                </tr>
+                <tr>
+                  <td><kbd>Ctrl</kbd> + <kbd>6</kbd></td>
+                  <td>打开设置</td>
+                </tr>
+                <tr>
+                  <td><kbd>F5</kbd></td>
+                  <td>刷新当前页数据（版本清单、Java 列表、资源库等）</td>
+                </tr>
+                <tr>
+                  <td><kbd>Esc</kbd></td>
+                  <td>从资源简介退回列表</td>
+                </tr>
+                <tr>
+                  <td><kbd>Enter</kbd></td>
+                  <td>在版本列表里对选中的那一行生效：游戏行直接启动，版本行安装并创建</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="muted small" style="margin-top:0.8rem">
+            下载与安装进行时，窗口底部会出现一条细进度线，进度跑完自动收起。
+          </p>
+        </section>
+
+        <section id="verify">
+          <h2>7. 校验文件</h2>
+          <p>下载页给出了 SHA-256 校验值。想确认文件完整，在 PowerShell 里运行：</p>
+          <pre class="code-block">Get-FileHash .\McLuncher-windows.exe -Algorithm SHA256</pre>
+          <p class="muted small">输出的哈希应与下载页显示的一字不差；对不上就重新下载，不要直接运行。</p>
+        </section>
+
+        <section id="trouble">
+          <h2>8. 遇到问题时</h2>
+          <ul>
+            <li><strong>被安全软件拦下</strong>：未签名程序的常见现象，选择「仍要运行」或加白名单。</li>
+            <li><strong>启动时报 Java 相关错误</strong>：点顶部的 Java 状态胶囊去工具页补齐对应版本。</li>
+            <li><strong>下载中断</strong>：支持断点续传，重新点一次下载会接着之前的进度继续。</li>
+            <li><strong>其他疑问</strong>：先看<a href="faq.html">问答页</a>，再看<a href="status.html">状态页</a>确认站点是否正常。</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ftr">
+  <div class="ftr__inner">
+    <div class="ftr__brand">
+      <a class="brand" href="index.html">
+        <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="15" fill="#0b0f14"></rect>
+          <path d="M17 46V20l15 16 15-16v26" fill="none" stroke="#3fb27f" stroke-width="6"
+                stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span class="brand__text">McLuncher</span>
+      </a>
+      <p>纯静态站点：没有后端、没有数据库、没有追踪脚本，页面里不加载任何第三方资源。</p>
+    </div>
+
+    <div>
+      <h4>站点</h4>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="download.html">下载</a></li>
+        <li><a href="guide.html">使用指南</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>支持</h4>
+      <ul>
+        <li><a href="faq.html">常见问题</a></li>
+        <li><a href="status.html">运行状态</a></li>
+        <li><a href="guide.html#verify">校验文件</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ftr__bottom">
+    <span>© <span data-year>2026</span> McLuncher · 作者 &amp; 开发者：花冈柚子</span>
+    <span>版本 v1.12.0 · <a href="#main">回到顶部</a></span>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

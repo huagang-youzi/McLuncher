@@ -1,0 +1,20 @@
+*.log
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# JetBrains / IDE transient temp dirs (created and removed while the IDE runs)
+*JF*.tmp.dir/
+*.tmp.dir/
+*.tmp
+~$*
+
+# 调试预览图（不入库）
+*.preview.png
+*.bundle
+
+
+
+# 安装包：exe 已降到 69MB，可随仓库分发（GitCode Pages 直接提供下载）；
+# zip 体积更大且页面未引用，仍不入库
+downloads/McLuncher-windows.zip
