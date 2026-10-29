@@ -1,9 +1,9 @@
 {
   "product": "McLuncher",
   "version": "1.12.0",
-  "sizeBytes": 69071778,
+  "sizeBytes": 69079456,
   "sizeNote": "69.1 MB",
-  "sha256": "8ebb789ac4563f50727deaf2a340d76d7d0ca3a6802ec09ef7a6dfee1384b2c6",
+  "sha256": "c2674a4660ebd20ac049373f8a145ddb60331e3ba8db0a722e6ea901b959f8a5",
   "url": "downloads/McLuncher-windows.exe",
   "releasedAt": "2026-10-30",
   "note": "品牌统一为 McLuncher：官网与更新源切换到自有域名，数据目录迁移到 %AppData%\\.mcluncher"
